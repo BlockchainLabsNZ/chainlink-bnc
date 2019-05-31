@@ -3,7 +3,7 @@ pragma solidity 0.4.24;
 import "./Chainlink.sol";
 import "./interfaces/LinkTokenInterface.sol";
 import "./ChainlinkClient.sol";
-import "./openzeppelin-solidity/contracts/ownership/Ownable.sol";
+import "openzeppelin-solidity/contracts/ownership/Ownable.sol";
 
 
 contract ATestnetConsumer is ChainlinkClient, Ownable {

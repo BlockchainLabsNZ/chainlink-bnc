@@ -9,9 +9,7 @@
     "test": "./node_modules/.bin/truffle test"
   },
   "dependencies": {
-    "commander": "^2.20.0",
-    "solc": "0.4.24",
-    "truffle": "^5.0.19",
-    "web3": "^1.0.0-beta.55"
+    "openzeppelin-solidity": "1.12.0",
+    "truffle": "^5.0.19"
   }
 }

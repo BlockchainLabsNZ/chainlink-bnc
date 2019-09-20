@@ -1,0 +1,10 @@
+{
+  "extends": "solhint:recommended",
+  "rules": {
+    "indent": ["error", 4],
+    "func-order": "off",
+    "separate-by-one-line-in-contract": "off",
+    "two-lines-top-level-separator": "off",
+    "compiler-version": ["error", "^0.5.0"]
+  }
+}

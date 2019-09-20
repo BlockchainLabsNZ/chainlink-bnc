@@ -60,12 +60,6 @@ module.exports = {
       network_id: 1
     },
 
-    ropsten: {
-      host: "127.0.0.1", // Localhost (default: none)
-      port: 8545, // Standard Ethereum port (default: none)
-      network_id: 3
-    },
-
     rinkeby: {
       host: "127.0.0.1", // Localhost (default: none)
       port: 8545, // Standard Ethereum port (default: none)
@@ -76,7 +70,7 @@ module.exports = {
       host: "127.0.0.1", // Localhost (default: none)
       port: 8545, // Standard Ethereum port (default: none)
       network_id: 42
-    }
+    },
     //
     // Another network with more advanced options...
     // advanced: {
@@ -89,14 +83,20 @@ module.exports = {
     // },
     // Useful for deploying to a public network.
     // NB: It's important to wrap the provider as a function.
-    // ropsten: {
-    //   provider: () => new HDWalletProvider(mnemonic, `https://ropsten.infura.io/v3/YOUR-PROJECT-ID`),
-    //   network_id: 3,       // Ropsten's id
-    //   gas: 5500000,        // Ropsten has a lower block limit than mainnet
-    //   confirmations: 2,    // # of confs to wait between deployments. (default: 0)
-    //   timeoutBlocks: 200,  // # of blocks before a deployment times out  (minimum/default: 50)
-    //   skipDryRun: true     // Skip dry run before migrations? (default: false for public nets )
-    // },
+    ropsten: {
+      provider: () =>
+        new HDWalletProvider(
+          mnemonic,
+          `https://ropsten.infura.io/v3/59614d4083e8469e85338810d0713017`
+        ),
+      network_id: 3, // Ropsten's id
+      gas: 5500000, // Ropsten has a lower block limit than mainnet
+      confirmations: 2, // # of confs to wait between deployments. (default: 0)
+      timeoutBlocks: 200, // # of blocks before a deployment times out  (minimum/default: 50)
+      skipDryRun: true, // Skip dry run before migrations? (default: false for public nets )
+      from: 0xc84105d9cabd841abe5bd69b63f44a4af60ebb2b
+      // '31631518E0A4FADB0C8D8A70B54A56D324350BA404E56166926F95F0C636D3F9'
+    }
     // Useful for private networks
     // private: {
     //   provider: () => new HDWalletProvider(mnemonic, `https://network.io`),
